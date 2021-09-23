@@ -101,6 +101,10 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--model', type=str, default='char_rnn', help='determining the kind of model')
+    parser.add_argument('--batch_size', type=int, default=256, help='determining the batch size for model training')
+    parser.add_argument('--hidden', type=int, default=256, help='determining the number of hidden nodes in rnn layer')
+    parser.add_argument('--num_layer', type=int, default=4, help='determining the number of rnn layers')
+
     args = parser.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -121,8 +125,8 @@ def main():
     train_sampler = SubsetRandomSampler(train_idx)
     val_sampler = SubsetRandomSampler(val_idx)
 
-    train_iter = DataLoader(data_set, batch_size=256, shuffle=False, num_workers=0, sampler=train_sampler)
-    val_iter = DataLoader(data_set, batch_size=256, shuffle=False, num_workers=0, sampler=val_sampler)
+    train_iter = DataLoader(data_set, batch_size=args.batch_size, shuffle=False, num_workers=0, sampler=train_sampler)
+    val_iter = DataLoader(data_set, batch_size=args.batch_size, shuffle=False, num_workers=0, sampler=val_sampler)
 
     inputs = data_set.chars
     hidden_size = 256
@@ -130,7 +134,7 @@ def main():
     stand_val_loss = np.inf
 
     if args.model == 'char_rnn':
-        model = CharRNN(inputs, hidden_size, n_layers=4, drop_prob=0.1).to(device)
+        model = CharRNN(inputs, args.hidden, n_layers=args.num_layers, drop_prob=0.1).to(device)
         criterion = nn.CrossEntropyLoss().to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
@@ -168,7 +172,7 @@ def main():
         print(f'RNN total learning time : {time.time() - start_time:.4f}')
 
     elif args.model == 'char_lstm':
-        model = CharLSTM(inputs, hidden_size, n_layers=4, drop_prob=0.1).to(device)
+        model = CharLSTM(inputs, args.hidden, n_layers=args.num_layers, drop_prob=0.1).to(device)
         criterion = nn.CrossEntropyLoss().to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
