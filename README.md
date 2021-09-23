@@ -2,10 +2,11 @@
 
 ### Character based RNN, LSTM Language model
 
-weight initialization
-'''
+<pre>
+<code>
 code
-'''
+</code>
+</pre>
 
 
 - loss graph in training
