@@ -1,7 +1,14 @@
 # Shakespeare Language Modeling
 
 ## Character based RNN, LSTM Language model
-##### 2021_1 Deep learning - Assignment#3
+#### 2021_1 Deep learning - Assignment#3
+
+- main.py
+<pre>
+<code>
+--model charrnn --batch_size 256 --hidden 256 --num_layer 4
+</code>
+</pre>
 
 - weight initialization
 
