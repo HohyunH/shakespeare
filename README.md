@@ -3,7 +3,7 @@
 ## Character based RNN, LSTM Language model
 #### 2021_1 Deep learning - Assignment#3
 
-- main.py
+### How to use
 <pre>
 <code>
 python main.py --model charrnn --batch_size 256 --hidden 256 --num_layer 4
