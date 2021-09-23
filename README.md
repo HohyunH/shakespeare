@@ -54,16 +54,19 @@ In this experiment, a comparative experiment was conducted on three softmax valu
 - T = 0.1
 -> NIUS:
    What is the gods be so.
+   
    ![image](https://user-images.githubusercontent.com/46701548/134512647-8c60f412-2165-46f9-9c27-96075dc483fc.png)
 
 - T = 1
 ->NNE:
   Why patieres; that's sort
+  
   ![image](https://user-images.githubusercontent.com/46701548/134512780-01c2d481-f402-40b8-959f-0242d96445a6.png)
 
 - T = 10
 -> NFGHdmC! NPIzkvMKpImk
    DfeobpOq
+   
    ![image](https://user-images.githubusercontent.com/46701548/134512896-2fe4b644-aef6-4db5-9597-842b9c5b2bbf.png)
 
 ### Generating Example
@@ -71,5 +74,7 @@ In this experiment, a comparative experiment was conducted on three softmax valu
 - Apply the seed character to be used for the test to one-hot-encoding and output the result by calling the next character as much as specified.
 
 ![image](https://user-images.githubusercontent.com/46701548/134513106-454509ba-6e29-47d8-90ae-ab8c396e3c18.png)
+
+
 ![image](https://user-images.githubusercontent.com/46701548/134513145-797ef62f-fe75-4510-9281-79274545602c.png)
 
