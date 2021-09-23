@@ -2,11 +2,32 @@
 
 ### Character based RNN, LSTM Language model
 
+- weight initialization
+
+1. in RNN
 <pre>
 <code>
-code
+def init_hidden(self, batch_size):
+  weight = next(self.parameters()).data
+  hidden = weight.new(self.n_layers, batch_size, self.n_hidden).zero_()
+  
+  return hidden
 </code>
 </pre>
+
+2. in LSTM
+<pre>
+<code>
+def init_hidden(self, batch_size):
+  weight = next(self.parameters()).data
+  hidden = (weight.new(self.n_layers, batch_size, self.n_hidden).zero_(),
+            weight.new(self.n_layers, batch_size, self.n_hidden).zero_())
+  
+  return hidden
+</code>
+</pre>
+
+-> in LSTM, we need to initialze hidden state and cell state
 
 
 - loss graph in training
