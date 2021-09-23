@@ -1,6 +1,7 @@
 # Shakespeare Language Modeling
 
-### Character based RNN, LSTM Language model
+## Character based RNN, LSTM Language model
+##### 2021_1 Deep learning - Assignment#3
 
 - weight initialization
 
