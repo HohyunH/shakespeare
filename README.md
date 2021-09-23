@@ -3,12 +3,12 @@
 ### Character based RNN, LSTM Language model
 
 - weight initialization
-
-  def init_hidden(self, batch_size):
-    weight = next(self.parameters()).data
-    hidden = weight.new(self.n_layers, batch_size, self.n_hidden).zero_()
-    return hidden
-
+'''
+def init_hidden(self, batch_size):
+  weight = next(self.parameters()).data
+  hidden = weight.new(self.n_layers, batch_size, self.n_hidden).zero_()
+  return hidden
+'''
 
 - loss graph in training
 
