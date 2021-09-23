@@ -44,3 +44,5 @@ def init_hidden(self, batch_size):
 
 ### Softmax Temperature
 In this experiment, a comparative experiment was conducted on three softmax values that change through temperature.
+
+y_i = exp(z_i/T)/sum(exp(z_i/T))
