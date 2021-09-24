@@ -43,7 +43,7 @@ def init_hidden(self, batch_size):
 ![image](https://user-images.githubusercontent.com/46701548/134507277-6d9082b2-b527-4e6f-a1af-e9d767591d05.png)
 
 ### Softmax Temperature
-In this experiment, a comparative experiment was conducted on three softmax values that change through temperature.
+In this assignment, a comparative experiment was conducted on three softmax values that change through temperature.
 
 ![image](https://user-images.githubusercontent.com/46701548/134512344-f5ccf1b3-7498-4bb9-89b5-1890a7d1c54e.png)
 
