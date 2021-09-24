@@ -6,7 +6,7 @@
 ### How to use
 <pre>
 <code>
-python main.py --model charrnn --batch_size 256 --hidden 256 --num_layer 4
+python main.py --model [char_rnn, char_lstm] --batch_size 256 --hidden 256 --num_layer 4
 </code>
 </pre>
 
